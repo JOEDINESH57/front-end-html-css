@@ -1,0 +1,218 @@
+:root {
+    --primary-text-color: #012E57;
+    --secondary-text-color: #000000;
+    --faded-text: #B6B6B6;
+    --background-color: #002649;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.main-container {
+    max-width: 375px;
+    height: 812px;
+    margin: auto;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.nav-bar {
+    background-color: #fff;
+    padding: 10px;
+}
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 20px; /* Adds padding to the left and right sides */
+}
+.nav-name{
+    margin-left: 20px;
+}
+
+hr {
+    margin: 0;
+    border: 0.5px solid #000;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center; /* Aligns the icon vertically with the text */
+}
+
+.profile-icon svg {
+    width: 70px; /* Adjust size as needed */
+    height: 70px; /* Adjust size as needed */
+    color: var(--background-color); /* This controls the color of the icon */
+}
+
+
+
+
+.patient-name-gender-age {
+    color: var(--primary-text-color);
+    font-size: 18px;
+}
+
+.patient-id {
+    color: var(--primary-text-color);
+    font-size: 14px;
+}
+
+.dashboard {
+    background-color: #002649;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 15px;
+}
+
+.dashboard-head {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.dashboard-content {
+    display: flex;
+    align-items: center;
+}
+
+.semicircle-container {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    margin-right: 20px;
+}
+
+.semicircle {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background-color: #ddd;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    overflow: hidden;
+}
+
+.semicircle:before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    background-color: #ffa500; /* Orange for 40% */
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    transform-origin: bottom;
+    transform: rotate(-144deg); /* Adjust to represent 40% */
+}
+
+.inner-circle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    height: 65px;
+    background-color: #002649;
+    border-top-left-radius: 130px;
+    border-top-right-radius: 130px;
+}
+
+.percentage-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.indicator {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.graph-line {
+    height: 2px;
+    margin-top: 5px;
+}
+
+.emg-line {
+    background-color: limegreen;
+    width: 50%;
+}
+
+.rom-line {
+    background-color: red;
+    width: 50%;
+}
+
+
+.patient-details {
+    display: grid;
+    grid-template-columns: 100px 1fr; /* First column is for labels, second is for values */
+    grid-row-gap: 10px; /* Space between rows */
+    font-size: 14px;
+    color: var(--faded-text);
+    margin: 15px;
+}
+
+.detail-row {
+    display: contents; /* Allows grid layout to apply directly */
+}
+
+.label {
+    text-align: left;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.value i {
+    margin-right: 5px;
+    color: var(--primary-text-color);
+}
+
+.medical-history {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.medical-history .title {
+    font-weight: bold;
+    color: var(--primary-text-color);
+    margin-right: 10px;
+}
+
+.medical-history i {
+    margin-right: 5px;
+    padding: 10px ;
+}
